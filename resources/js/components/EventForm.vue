@@ -52,14 +52,6 @@
         props: {
             api: String
         },
-        mounted() {
-            const firstDayOfMonth = new Date(this.year, this.month, 1);
-            const lastDayOfMonth = new Date(this.year, this.month + 1, 0);
-
-            console.log(new Date().getDay());
-            console.log(firstDayOfMonth.getDay());
-            console.log(lastDayOfMonth.getDay());
-        },
         data() {
             return {
                 name: "",

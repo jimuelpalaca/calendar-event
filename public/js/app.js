@@ -2047,13 +2047,6 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     api: String
   },
-  mounted: function mounted() {
-    var firstDayOfMonth = new Date(this.year, this.month, 1);
-    var lastDayOfMonth = new Date(this.year, this.month + 1, 0);
-    console.log(new Date().getDay());
-    console.log(firstDayOfMonth.getDay());
-    console.log(lastDayOfMonth.getDay());
-  },
   data: function data() {
     var _this = this;
 
