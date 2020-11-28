@@ -22,7 +22,6 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.use(VueSweetalert2);
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('event-form', require('./components/EventForm').default);
 Vue.component('calendar', require('./components/Calendar').default);
 
