@@ -18,7 +18,6 @@
     </head>
     <body class="antialiased">
         <div id="app">
-            <example-component></example-component>
             <event-form api="{{ route('api.events.store') }}"></event-form>
         </div>
     </body>
