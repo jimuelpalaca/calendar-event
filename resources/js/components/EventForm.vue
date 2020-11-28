@@ -34,6 +34,7 @@
                             </div>
                         </div>
                         <div class="col-md-7">
+                            <calendar :event="event" />
                         </div>
                     </div>
                 </div>
