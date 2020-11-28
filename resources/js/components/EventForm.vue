@@ -128,6 +128,15 @@
                         showConfirmButton: false,
                         timer: 1750
                     });
+                }).catch((exception) => {
+                    this.$swal({
+                        toast: true,
+                        position: 'top-end',
+                        background: '#b83e43',
+                        title: '<span  style="color: #fff">Oops, something went wrong.</span>',
+                        showConfirmButton: false,
+                        timer: 1750
+                    });
                 })
             },
         },

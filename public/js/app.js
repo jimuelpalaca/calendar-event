@@ -2118,6 +2118,15 @@ __webpack_require__.r(__webpack_exports__);
           showConfirmButton: false,
           timer: 1750
         });
+      })["catch"](function (exception) {
+        _this2.$swal({
+          toast: true,
+          position: 'top-end',
+          background: '#b83e43',
+          title: '<span  style="color: #fff">Oops, something went wrong.</span>',
+          showConfirmButton: false,
+          timer: 1750
+        });
       });
     }
   },
