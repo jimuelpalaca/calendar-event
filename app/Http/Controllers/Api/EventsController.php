@@ -5,11 +5,9 @@ namespace App\Http\Controllers\Api;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Event as EventResource;
 use App\Models\Event;
 use Exception;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
@@ -17,7 +15,7 @@ class EventsController extends Controller
 {
     /**
      * @param Request $request
-     * @return JsonResponse
+     * @return EventResource
      * @throws Exception
      */
     public function store(Request $request)
@@ -29,6 +27,6 @@ class EventsController extends Controller
             'ends_at' => new Carbon($request->get('ends_at')),
         ]);
 
-        return response()->json($event);
+        return new EventResource($event);
     }
 }
