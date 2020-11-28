@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col-md-7">
-                            <calendar :event="event" />
+                            <calendar :event="event"/>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,18 @@
                     days: this.checkedDays,
                     starts_at: moment(this.dateFrom).format('YYYY-MM-DD'),
                     ends_at: moment(this.dateTo).format('YYYY-MM-DD')
-                }).then(({data: apiResponse}) => (this.event = apiResponse.data))
+                }).then(({data: apiResponse}) => {
+                    this.event = apiResponse.data;
+
+                    this.$swal({
+                        toast: true,
+                        position: 'top-end',
+                        background: '#41B883',
+                        title: '<span  style="color: #fff">Event successfully saved.</span>',
+                        showConfirmButton: false,
+                        timer: 1750
+                    });
+                })
             },
         },
         components: {
